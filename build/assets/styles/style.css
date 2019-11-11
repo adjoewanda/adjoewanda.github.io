@@ -1,0 +1,20 @@
+/*scss*/
+/*CSS*/
+header {
+  background-color: pink;
+}
+
+main {
+  background-color: skyblue;
+}
+
+footer {
+  background-color: pink;
+}
+
+.grid-container {
+  display: grid;
+  grid-row-gap: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

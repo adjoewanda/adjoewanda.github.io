@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Anthony Djoewanda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+  video, img {
+    max-width: 100%;
+  }
+  
+  .container-fluid {
+    background-color: pink; /*For Testing*/
+    max-width: 320px; /*For Testing*/
+    padding: 0; /*For Testing*/
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .main-menu {
+    position: fixed;
+    z-index: 10;
+    color: white;
+  }
+  
+  .fx-overlay {
+    background-color: rgba(0, 0, 0, .75);
+  }
+  
+  nav.main-menu ul {
+    padding: 0;
+  }
+  
+  nav.main-menu ul li {
+    list-style: none;
+  }
+  
+  nav.main-menu ul li ul {
+    padding: 0;
+  }
+  
+  nav.main-menu ul li ul li {
+    display: inline;
+  }
+  
+  .hero {
+    position: relative;
+  }
+  
+  .hero div {
+/*
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+*/
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+  }
+      
+</style>
+</head>
+
+<body>
+<div class="container-fluid">
+  <header>
+  <nav class="main-menu">
+    <div id="menuBtn"><i class="material-icons" aria-hidden="true">menu</i> Menu</div>
+    <ul>
+      <li><a href="index.html" title="Home">Home</a></li>
+      <li><a href="about.html" title="About">About</a></li>
+      <li><a href="contact.html" title="Contact">Contact</a></li>
+      <li>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/tonychuaco" title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+          <li><a href="https://github.com/tonychuaco" title="GitHub" target="_blank"><i class="fa fa-github"></i></a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  </header>
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Anthony Djoewanda</h1>
+        <p>Clearly describes career goal</p>
+      </div>  
+      <video autoplay>
+        <source src="assets/media/AdobeStock_283605926_Video_HD_Preview.mov" type="video/mp4">
+        <source src="assets/media/AdobeStock_283605926_Video_HD_Preview.mov" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div id="project1">
+      <img alt="placeholder" src="assets/images/AdobeStock_199340199_Preview.jpg">
+      <h3>Project Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="https://tonychuaco.github.io/naps">Visit Website</a>
+      <a href="https://github.com/tonychuaco/naps">View Source</a>      
+    </div>
+    <div id="project2">
+      <img alt="placeholder" src="assets/images/AdobeStock_243256399_Preview.jpg">
+      <h3>Project Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="project3">
+      <img alt="placeholder" src="assets/images/AdobeStock_298200979_Preview.jpg">
+      <h3>Project Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="project4">
+      <img alt="placeholder" src="assets/images/AdobeStock_299039846_Preview.jpg">
+      <h3>Project Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </main>
+  <footer><small>Made in 2019. By Anthony Djoewanda.</small></footer>
+</div>
+<script>
+$(function(){
+  
+  /*Main Navigation*/
+  $("nav.main-menu ul").hide();
+  
+  $("#menuBtn").click( () => {
+    $("nav.main-menu ul").toggle("slow").toggleClass("fx-overlay");
+  });
+      
+  let position = $(window).scrollTop(); 
+
+  $(window).scroll( () => {
+    let scroll = $(window).scrollTop();
+    if(scroll > position) {
+      $("header").fadeOut("slow");
+    } else {
+      $("header").fadeIn("slow");      
+    }
+    position = scroll;
+  });
+  
+  /*Project 2*/
+  $("#project2").show();
+  
+});  
+
+</script>
+</body>
+</html>
