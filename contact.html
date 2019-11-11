@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Anthony Djoewanda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Jolly+Lodger|Josefin+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Anthony Djoewanda</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+<form>
+	    <fieldset>
+        <legend>Contact Information:</legend>
+        <div class="form-group">
+        <label for="firstName">First Name: </label><input id="firstName" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+        <label for="lastName">Last Name: </label><input id="lastName" class="form-control" type="text">
+        </div>
+        <div class="form-group" id="ccInput">  
+        <label>Phone Number: </label><input type="text" id="phone" class="form-control" maxlength="15" onBlur="validate()">
+        </div>
+        <div class="form-group">  
+        <label>Email: </label><input type="email" id="email" class="form-control">
+        </div>
+      </fieldset>
+        <div class="form-group">
+        <label>Message: </label>
+        <textarea class="form-control"></textarea>
+        </div>
+       <!--<a href="confirm.html">--><button type="button" id="submit" class="btn btn-secondary" onClick="validate()">Submit</button><!--</a>-->
+
+
+</form>
+              
+            </ul>
+        </nav>
+        <main></main>
+      <div>
+        <h3>Follow on Social Media</h3>
+        <ul>
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>LinkedIn</li>
+          <li>Instagram</li>
+          <li>Pinterest</li>
+          <li>Tumblr</li>
+        </ul>
+      </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
