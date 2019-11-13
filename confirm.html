@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Confirmation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/styles/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+<header>
+</header>
+<div class="jumbotron message-confirmation">
+<h1>Message Confirmation!</h1>
+<p>We have received your message. One of our associates will follow up with you shortly.</p>
+<p>You will be redirected to the homepage in <span id="timer">10</span> seconds. Or click to the following to go back to the homepage.</p>
+<a href="index.html"><button class="btn btn-dark">Back to Homepage</button></a>
+</div>
+</div>
+<script src="assets/scripts/script.js"></script>
+<script>
+(function(){
+  var fX = setInterval(function(){
+    var x = $("#timer").html();
+    x--;
+    $("#timer").html(x);
+    if (x == 0) {
+      clearInterval(fX);
+      location.replace("index.html");
+    }
+  }, 1000);  
+}());
+
+</script>
+</body>
+</html>
