@@ -2,69 +2,98 @@
 
 /*CSS*/
 
-.container {
-	max-width: 320px;
-	margin: 0 auto;
+
+/* Normalize */
+* {
+    box-sizing: border-box;
 }
 
+  /* Don't forget <picture> for RWD img sprite */
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  // /* background image */
+  // div {
+  //   width: 100%;
+  //   height: 400px;
+  //   background-image: url('img1.jpg');
+  //   background-size: cover;
+  // }
+
+  // /* @media for RWD bg-img sprite */
+  // @media (min-device-width: 400px) {
+  //   div {
+  //     background-image: url('img2.jpg');
+  //   }
+  // }
+
+/* Layout */  
 header {
-    background-color: pink;
+  grid-area: header;
 }
 
-main {
-    background-color: skyblue;
+.container {
+  grid-area: container;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-
+  
 footer {
-    background-color: pink;
+  grid-area: footer;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 1.5rem;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-areas: 
+    "header"
+    "container"
+    "footer";
 }
 
-.grid-item1 {
-    grid-column: 1 / span 12;
+/*==================
+ *== Contact Page ==
+ *==================*/
+
+/* Contact Form */
+.form-message {
+  margin-bottom: 1.5rem;
 }
 
-@media (min-width: 600px) {
-    grid-template-columns: auto auto;
+/* Aside */
+aside > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
-@media (min-width: 960px) {
-    grid-template-columns: auto auto auto;
+/*==================
+ *== Confirm Page ==
+ *==================*/
+
+.message-confirmation {
+  background-color: white;
 }
 
-/* Notes */
-* {
-    box-sizing: border-box;
+/*===================
+ *== Media Queries ==
+ *===================*/
+
+@media (min-width: 640px) and (max-width: 991px) {
+}
+
+@media (min-width: 992px) {
+  /* Contact Form */
+  .form-contact {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .form-message {
+    min-height: 21rem;
   }
   
-  /* Don't forget <picture> for RWD img sprite */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  video {
-    max-width: 100%;
-    height: auto;
-  }  
-  
-  /* background image */
-  div {
-    width: 100%;
-    height: 400px;
-    background-image: url('img1.jpg');
-    background-size: cover;
-  }
-  
-  /* @media for RWD bg-img sprite */
-  @media (min-device-width: 400px) {
-    div {
-      background-image: url('img2.jpg');
-    }
-  }
-  
+}

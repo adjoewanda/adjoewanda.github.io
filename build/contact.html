@@ -2,66 +2,87 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Anthony Djoewanda</title>
+<title>Contact Anthony Djoewanda</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Jolly+Lodger|Josefin+Sans&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="assets/styles/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Anthony Djoewanda</h1>
-        </header>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-<form>
-	    <fieldset>
-        <legend>Contact Information:</legend>
+<div class="grid-container container-fluid">
+  <header>
+  </header>
+  <div class="container">
+  <main class="col-lg-8">
+    <form class="form-contact">
+      <fieldset class="col-lg-4">
         <div class="form-group">
-        <label for="firstName">First Name: </label><input id="firstName" class="form-control" type="text">
+          <label for="firstName">First Name: </label><input id="firstName" class="form-control" type="text">
         </div>
         <div class="form-group">
-        <label for="lastName">Last Name: </label><input id="lastName" class="form-control" type="text">
+          <label for="lastName">Last Name: </label><input id="lastName" class="form-control" type="text">
         </div>
         <div class="form-group" id="ccInput">  
-        <label>Phone Number: </label><input type="text" id="phone" class="form-control" maxlength="15" onBlur="validate()">
+          <label>Phone Number:* </label><input type="text" id="phone" class="form-control" maxlength="15" onBlur="validate()">
         </div>
         <div class="form-group">  
-        <label>Email: </label><input type="email" id="email" class="form-control">
+          <label>Email: </label><input type="email" id="email" class="form-control">
         </div>
       </fieldset>
-        <div class="form-group">
+      <fieldset class="form-group col-lg-8">
         <label>Message: </label>
-        <textarea class="form-control"></textarea>
-        </div>
-       <!--<a href="confirm.html">--><button type="button" id="submit" class="btn btn-secondary" onClick="validate()">Submit</button><!--</a>-->
-
-
-</form>
-              
-            </ul>
-        </nav>
-        <main></main>
-      <div>
-        <h3>Follow on Social Media</h3>
-        <ul>
-          <li>Facebook</li>
-          <li>Twitter</li>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
-          <li>Pinterest</li>
-          <li>Tumblr</li>
-        </ul>
-      </div>
-        <footer></footer>
+        <textarea class="form-message form-control" rows="5"></textarea>
+        <!--<a href="confirm.html">--><button type="button" id="submit" class="btn btn-dark" onClick="validate()">Submit</button><!--</a>-->
+      </fieldset>
+    </form>
+  </main>
+  <aside class="col-lg-4">
+    <div>
+    <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="tonychuaco"><a class="LI-simple-link" href="https://www.linkedin.com/in/tonychuaco?trk=profile-badge">Anthony Djoewanda</a></div>
     </div>
+  </aside>
+  </div>
+</div>
+<script src="assets/scripts/script.js"></script>
+<!--<script src="assets/scripts/check.js"></script>-->
+<script>
+function validate() {
+	var qq = document.getElementById("phone").value;
+	validateCreditCard(qq);
+}	
+
+function validateCreditCard(v) {
+  var x = v.replace(/[^\d]/g, '');
+  var z = {}, y = [
+          "It must be 10 digits and all numbers.",
+          "All digits cannot be the same number."
+        ];
+  var validCondition =
+      (x.length === 10) &&
+      (!(x.match(/[^0-9]/g))) &&
+      (x != x[0].repeat(10));
+
+  z.valid = (validCondition) ? true : false, z.number = v;
+  if (z.valid == false) {
+    $("#phone").addClass("border border-danger").focus(function() {$("#phone").removeClass("border border-danger"); $("#warning").remove()});
+    if (x.length !== 10 || x.match(/[^0-9]/g)) {
+      z.error = y[0];
+    } else if (x == x[0].repeat(10)) {
+      z.error = y[1];
+    }
+    $("#ccInput").append("<small id='warning' style='color: red;'>" + z.error + "</small>");
+  } else {
+    location.replace("confirm.html");
+  }
+}
+	
+</script>
+
 </body>
 </html>

@@ -1,20 +1,73 @@
 /*scss*/
 /*CSS*/
-header {
-  background-color: pink;
+/* Normalize */
+* {
+  box-sizing: border-box;
 }
 
-main {
-  background-color: skyblue;
+/* Don't forget <picture> for RWD img sprite */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Layout */
+header {
+  grid-area: header;
+}
+
+.container {
+  grid-area: container;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 footer {
-  background-color: pink;
+  grid-area: footer;
 }
 
 .grid-container {
   display: grid;
-  grid-row-gap: 1.5rem;
+  grid-gap: 1.5rem;
+  grid-template-areas: "header" "container" "footer";
+}
+
+/*==================
+ *== Contact Page ==
+ *==================*/
+/* Contact Form */
+.form-message {
+  margin-bottom: 1.5rem;
+}
+
+/* Aside */
+aside > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/*==================
+ *== Confirm Page ==
+ *==================*/
+.message-confirmation {
+  background-color: white;
+}
+
+/*===================
+ *== Media Queries ==
+ *===================*/
+@media (min-width: 992px) {
+  /* Contact Form */
+  .form-contact {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .form-message {
+    min-height: 21rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
