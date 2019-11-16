@@ -10,35 +10,129 @@ img, video {
   height: auto; }
 
 /* Layout */
-header {
-  grid-area: header; }
+.sidebar {
+  grid-area: gSidebar; }
 
-.container {
-  grid-area: container;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center; }
+.main-content {
+  grid-area: gMain; }
 
-footer {
-  grid-area: footer; }
+.related-content {
+  grid-area: gRelated; }
 
 .grid-container {
   display: grid;
   grid-gap: 1.5rem;
-  grid-template-areas: "header" "container" "footer"; }
+  grid-template-areas: "gSidebar" "gMain" "gRelated"; }
+
+aside {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+
+/*==================
+ *== Header ==
+ *==================*/
+header {
+  display: flex;
+  justify-content: flex-end; }
+
+.main-menu {
+  position: fixed;
+  z-index: 10;
+  color: white; }
+
+.fx-overlay {
+  background-color: rgba(0, 0, 0, 0.75); }
+
+nav.main-menu ul {
+  padding: 0; }
+
+nav.main-menu ul li {
+  list-style: none; }
+
+nav.main-menu ul li ul {
+  padding: 0; }
+
+nav.main-menu ul li ul li {
+  display: inline; }
+
+.hero {
+  position: relative; }
+
+.hero div {
+  /*
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  */
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff; }
+
+/*==================
+ *== Footer ==
+ *==================*/
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center; }
+
+/*==================
+ *== About Page ==
+ *==================*/
+/* Profile */
+.profile {
+  text-align: center; }
+
+.profile ul {
+  padding: 0; }
+
+.profile ul li {
+  list-style-type: none; }
+
+.profile img {
+  border-radius: 15px; }
+
+/* Timeline */
+.timeline-table {
+  display: flex;
+  justify-content: flex-start; }
+
+.timeline-table div:nth-child(1) {
+  min-width: 175px;
+  text-align: right;
+  border-right: black medium solid;
+  margin-right: 1rem;
+  padding-right: 1rem; }
 
 /*==================
  *== Contact Page ==
  *==================*/
 /* Contact Form */
 .form-message {
+  min-height: 21rem;
   margin-bottom: 1.5rem; }
 
-/* Aside */
-aside > div {
+#submit {
+  margin-left: 1rem; }
+
+/* Sidebar Social*/
+.social-icons {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center; }
+  justify-content: center;
+  padding: 0; }
+
+.social-icons > li {
+  display: inline;
+  font-size: 3rem;
+  margin: 0 .75rem; }
+
+.social-icons li a {
+  color: black; }
 
 /*==================
  *== Confirm Page ==
@@ -49,11 +143,83 @@ aside > div {
 /*===================
  *== Media Queries ==
  *===================*/
-@media (min-width: 992px) {
+/* Extra Small */
+@media (min-width: 250px) and (max-width: 575px) {
+  /* Profile */
+  .biography h2 {
+    text-align: center; }
+
+  .profile img {
+    max-width: 50%; }
+
+  /* Contact Form */
+  .form-message {
+    min-height: initial; }
+
+  /* Timeline */
+  .timeline-table {
+    display: initial; }
+
+  .timeline-table div:nth-child(1) {
+    min-width: 100px;
+    text-align: left;
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0; } }
+/* Small */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Profile */
+  .biography h2 {
+    text-align: center; }
+
+  .profile img {
+    max-width: 50%; }
+
   /* Contact Form */
   .form-contact {
     display: flex;
-    flex-flow: row wrap; }
+    flex-flow: row wrap;
+    justify-content: space-between; }
 
   .form-message {
-    min-height: 21rem; } }
+    min-height: initial; } }
+/* Medium */
+@media (min-width: 768px) and (max-width: 991px) {
+  .grid-container {
+    grid-template-areas: "gMain gMain gMain gSidebar" "gMain gMain gMain gRelated"; }
+
+  /* Profile */
+  .profile h2 {
+    text-align: left; }
+
+  /* Contact Form */
+  .form-message {
+    min-height: initial; } }
+/* Large */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .grid-container {
+    grid-template-areas: "gMain gMain gMain gSidebar" "gMain gMain gMain gRelated"; }
+
+  /* Profile */
+  .profile h2 {
+    text-align: left; }
+
+  /* Contact Form */
+  .form-contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; } }
+/* Extra Large */
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-areas: "gSidebar gSidebar gSidebar gMain gMain gMain gMain gMain gMain gMain gRelated gRelated"; }
+
+  /* Profile */
+  .profile h2 {
+    text-align: left; }
+
+  /* Contact Form */
+  .form-contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; } }
