@@ -39,4 +39,14 @@ $(function(){
   let z = (x <= y) ? "Present" : "May 2020";
   $("#dateNow").html(z);
 
+  /*================
+   *== Extra Small ==
+   *================*/
+
+   if ($(document).width() < 600) {
+    $("header").css("height", "100vh");
+    let x = ($(document).width() < 992) ? "rgba(0,0,0,.8)" : "rgba(0,0,0,.4)";
+    $("#menuTop").css({"background-color": x});      
+   }
+
 });
