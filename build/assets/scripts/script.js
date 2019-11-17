@@ -22,7 +22,7 @@ $(function(){
       $("#menuTop").css("background-color", "initial");      
     } else {
       $("#menuMain").fadeIn("slow");
-      let x = ($(document).width() < 992) ? "rgba(0,0,0,.8)" : "rgba(0,0,0,.4)";
+      let x = ($(document).width() < 992) ? "rgba(0,0,0,.4)" : "rgba(0,0,0,.4)";
       $("#menuTop").css({"background-color": x});      
     }
     position = scroll;
