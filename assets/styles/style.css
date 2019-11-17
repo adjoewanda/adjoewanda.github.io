@@ -304,6 +304,10 @@ footer {
  *===================*/
 /* Extra Small */
 @media (min-width: 250px) and (max-width: 575px) {
+  .menu-top {
+    padding-right: 1.5rem;
+  }
+
   .header-section {
     margin-left: 0;
   }
