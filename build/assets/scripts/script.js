@@ -25,11 +25,11 @@ $(function(){
       let x = ($(document).width() < 992) ? "rgba(0,0,0,.4)" : "rgba(0,0,0,.4)";
       $("#menuTop").css({"background-color": x});      
     }
-    if(scroll < 100) {
-      $("#menuMain").fadeIn("slow");
-      let x = ($(document).width() < 992) ? "rgba(0,0,0,.4)" : "rgba(0,0,0,.4)";
-      $("#menuTop").css({"background-color": x});      
-    }
+    // if(scroll < 100) {
+    //   $("#menuMain").fadeIn("slow");
+    //   let x = ($(document).width() < 992) ? "rgba(0,0,0,.4)" : "rgba(0,0,0,.4)";
+    //   $("#menuTop").css({"background-color": x});      
+    // }
     position = scroll;
   });
   
