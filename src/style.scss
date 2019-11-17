@@ -382,10 +382,10 @@ footer {
     margin-bottom: 1.5rem;
   }
 
-  /* Menu */
-  .fx-overlay {
-    background-color: rgba(0,0,0,.8);
-  }
+  // /* Menu */
+  // .fx-overlay {
+  //   background-color: rgba(0,0,0,.8);
+  // }
 
   /* Profile */
   .biography h2 {
@@ -430,10 +430,10 @@ footer {
     margin-bottom: 1.5rem;
   }
 
-  /* Menu */
-  .fx-overlay {
-    background-color: rgba(0,0,0,.8);
-  }
+  // /* Menu */
+  // .fx-overlay {
+  //   background-color: rgba(0,0,0,.8);
+  // }
 
   /* Profile */
   .biography h2 {
@@ -458,15 +458,23 @@ footer {
 
 /* Medium */
 @media (min-width: 768px) and (max-width: 991px) {
+  .hero h1 {
+    margin-top: 30vh;
+  }
+
+  .hero p {
+    margin-bottom: auto;
+  }
+
   .project-container div.col-lg-8 {
     height: 100%;
     margin-bottom: 1.5rem;
   }
 
-  /* Menu */
-  .fx-overlay {
-    background-color: rgba(0,0,0,.8);
-  }
+  // /* Menu */
+  // .fx-overlay {
+  //   background-color: rgba(0,0,0,.8);
+  // }
 
   .grid-container {
     grid-template-areas: 
