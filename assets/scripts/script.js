@@ -25,6 +25,11 @@ $(function(){
       let x = ($(document).width() < 992) ? "rgba(0,0,0,.4)" : "rgba(0,0,0,.4)";
       $("#menuTop").css({"background-color": x});      
     }
+    if(scroll < 100) {
+      $("#menuMain").fadeIn("slow");
+      let x = ($(document).width() < 992) ? "rgba(0,0,0,.4)" : "rgba(0,0,0,.4)";
+      $("#menuTop").css({"background-color": x});      
+    }
     position = scroll;
   });
   
@@ -45,7 +50,7 @@ $(function(){
 
    if ($(document).width() < 600) {
     $("header").css("height", "100vh");
-    let x = ($(document).width() < 992) ? "rgba(0,0,0,.8)" : "rgba(0,0,0,.4)";
+    let x = ($(document).width() < 992) ? "rgba(0,0,0,.4)" : "rgba(0,0,0,.4)";
     $("#menuTop").css({"background-color": x});      
    }
 
