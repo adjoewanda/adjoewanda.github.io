@@ -1,11 +1,15 @@
 import React from 'react';
 
+import Projects from './Projects';
+
 import img1 from './../images/west4-thumbnail.png';
 import img2 from './../images/penny-thumbnail.png';
 import img3 from './../images/jenn-thumbnail.png';
 
+
 const Main = () => (
   <>
+    <Projects />
   <div className="project-container container">
     <div id="project1" className="projectItems">
       <div className="col-lg-8">
