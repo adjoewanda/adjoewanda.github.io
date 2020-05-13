@@ -1,0 +1,93 @@
+/*==================
+ *== Header ==
+ *==================*/
+ .main-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-menu a {
+  color: white;
+}
+
+#menuBtn > i {
+  font-size: 1.25rem;
+}
+
+.menu-top {
+  width: 100vw;
+  padding: 1.5rem 4.5rem 1.5rem 0;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: right;
+  position: fixed;
+  z-index: 10;
+  color: white;
+  text-transform: uppercase;
+}
+
+.fx-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+nav.main-menu ul {
+  padding: 0;
+}
+
+nav.main-menu ul li {
+  list-style: none;
+}
+
+nav.main-menu ul li ul {
+  padding: 0;
+}
+
+nav.main-menu ul li ul li {
+  display: inline;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.about-header {
+  background-image: url('./../images/background-2.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-left: 10vw;
+}
+
+.header-section div > div {
+  border-bottom: solid white thin;
+  padding-bottom: 1rem;
+}
+
+.header-section div p {
+  margin-top: 1.5rem;
+}
+
+.header-section div ul {
+  padding: 0;
+}
+
+.header-section div ul li {
+  display: inline;
+  font-size: 2.25rem;
+  margin-right: 1rem;
+}
+
+.header-section div ul a {
+  color: white;
+}
+
+
+.Header {
+  background-image: url('./../images/background-2.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 90vh;
+}

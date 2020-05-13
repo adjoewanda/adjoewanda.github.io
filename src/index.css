@@ -1,0 +1,352 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*scss*/
+/*CSS*/
+/* Normalize */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2, h3, h5 {
+  font-weight: 600;
+}
+
+h4, .timeline-details {
+  color: #9b9b9b;
+  font-weight: 500;
+}
+
+.timeline-details {
+  font-size: 0.85rem;
+}
+
+h5, .company {
+  font-variant: small-caps;
+}
+
+h2, h3, h4 {
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.company {
+  font-weight: 700;
+}
+
+/* Don't forget <picture> for RWD img sprite */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Layout */
+body {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  grid-area: gSidebar;
+}
+
+.main-content {
+  grid-area: gMain;
+}
+
+.related-content {
+  grid-area: gRelated;
+}
+
+.grid-container {
+  background: white;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-areas: "gSidebar" "gMain" "gRelated";
+}
+
+aside {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/*==================
+ *== Footer ==
+ *==================*/
+.footer-container {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: whitesmoke;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/*==================
+ *== Homepage ==
+ *==================*/
+.project-container {
+  background: white;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+}
+
+.projectItems {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.projectItems div:first-child {
+  height: 85vh;
+  overflow: hidden;
+}
+
+.projectItems div a {
+  margin: 0 0.75rem 0.75rem 0;
+}
+
+.projectItems div i {
+  font-size: 1rem;
+}
+
+/*==================
+ *== About Page ==
+ *==================*/
+/* Profile */
+.profile {
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.profile h3 {
+  margin-bottom: 1.5rem;
+}
+
+.profile ul {
+  padding: 0;
+}
+
+.profile ul li {
+  list-style-type: none;
+}
+
+.profile img {
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+/* Timeline */
+.timeline-table {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.timeline-table div:nth-child(1) {
+  min-width: 175px;
+  text-align: right;
+  border-right: black medium solid;
+  margin-right: 1rem;
+  padding-right: 1rem;
+}
+
+.timeline-table div:nth-child(2) {
+  margin-bottom: 1.5rem;
+}
+
+/*==================
+ *== Contact Page ==
+ *==================*/
+#submit {
+  margin-left: 1rem;
+}
+
+/* Sidebar Social*/
+.social-icons {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.social-icons > li {
+  display: inline;
+  font-size: 2.25rem;
+  margin: 0 0.75rem;
+}
+
+.social-icons li a {
+  color: black;
+}
+
+/*==================
+ *== Confirm Page ==
+ *==================*/
+.message-confirmation {
+  background-color: white;
+}
+
+/*===================
+ *== Media Queries ==
+ *===================*/
+/* Extra Small */
+@media (min-width: 250px) and (max-width: 575px) {
+  .menu-top {
+    padding-right: 1.5rem;
+  }
+
+  .header-section {
+    margin-left: 0;
+  }
+
+  .hero h1 {
+    margin-top: 30vh;
+  }
+
+  .project-container div.col-lg-8 {
+    height: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Profile */
+  .biography h2 {
+    text-align: center;
+  }
+
+  .profile img {
+    max-width: 50%;
+  }
+
+  /* Contact Form */
+  .form-message {
+    min-height: initial;
+  }
+
+  /* Timeline */
+  .timeline-table {
+    display: initial;
+  }
+
+  .timeline-table div:nth-child(1) {
+    min-width: 100px;
+    text-align: left;
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+  }
+}
+/* Small */
+@media (min-width: 576px) and (max-width: 767px) {
+  .hero h1 {
+    margin-top: 30vh;
+  }
+
+  .hero p {
+    margin-bottom: auto;
+  }
+
+  .project-container div.col-lg-8 {
+    height: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Profile */
+  .biography h2 {
+    text-align: center;
+  }
+
+  .profile img {
+    max-width: 50%;
+  }
+
+  .form-message {
+    min-height: initial;
+  }
+}
+/* Medium */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero h1 {
+    margin-top: 30vh;
+  }
+
+  .hero p {
+    margin-bottom: auto;
+  }
+
+  .project-container div.col-lg-8 {
+    height: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid-container {
+    grid-template-areas: "gMain gMain gMain gSidebar" "gMain gMain gMain gRelated";
+  }
+
+  /* Profile */
+  .profile h2 {
+    text-align: left;
+  }
+
+  /* Contact Form */
+  .form-message {
+    min-height: initial;
+  }
+}
+/* Large */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .grid-container {
+    grid-template-areas: "gMain gMain gMain gSidebar" "gMain gMain gMain gRelated";
+  }
+
+  /* Profile */
+  .profile h2 {
+    text-align: left;
+  }
+}
+/* Extra Large */
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-areas: "gSidebar gSidebar gSidebar gMain gMain gMain gMain gMain gMain gMain gRelated gRelated";
+  }
+
+  /* Profile */
+  .profile h2 {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
