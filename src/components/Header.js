@@ -6,11 +6,9 @@ const Header = () => (
   <div className="Header container-fluid jumbotron jumbotron-fluid bg-transparent d-flex align-items-center" >
     <header className="header-section ">
         <div>
-          <div className="hero">
+          <div className="hero col-md-6">
             <h1>Anthony Djoewanda</h1>
-            <p>Web Developer and Designer.<br />
-              Background in Ecommerce and Retail.<br />
-              Websites, Online Stores, and More.</p>
+            <p>Web Developer in New York City. Originally from Indonesia and previously from Singapore, Anthony started his career in ecommerce before transitioning into web development. Background education in software development, design, and business.</p>
           </div>
           <p>Connect @tonychuaco</p>
           <ul>
