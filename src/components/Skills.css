@@ -1,0 +1,23 @@
+.Skills {
+  background-image: url('./../images/background-about.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.Skills-col {
+  background-color: rgba(0, 0, 0, .55);
+}
+
+.Skills-text {
+  min-height: 80vh;
+}
+
+.list-inline-item:hover {
+  color: #494f54;
+}
+
+.list-inline-item {
+  margin-left: .9rem;
+  margin-bottom: .5rem;
+}
