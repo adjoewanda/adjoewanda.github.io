@@ -1,5 +1,6 @@
 import React from 'react';
 
+import whitecoffee from './../images/white-coffee-thumbnail.jpg';
 import acc from './../images/advanced-copy-center-thumbnail.jpg';
 import mtgfan from './../images/mtgfan-thumbnail.png';
 import elmhurst from './../images/elmhurst-thumbnail.png';
@@ -10,27 +11,34 @@ const Projects = () => {
   const content = [
     {
       key: 0,
+      title: "White Coffee",
+      src: whitecoffee,
+      demoURL: "https://whitecoffee.com",
+      githubURL: null,
+      description: "This web design project is for a local business in New York City. The primary objective of the project is to redesign the website for potential clients to learn more about the company and products, as well as for consumers to shop online. Made with CSS, HTML, and Squarespace."
+    }, {
+      key: 1,
       title: "Advanced Copy Center Website",
       src: acc,
       demoURL: "https://advancedcopycenter.web.app",
       githubURL: null,
       description: "This freelance project is for a local printing company in New York City. The primary objective of the project is to create a website where users can contact and submit their print job inquiries online. Made with JavaScript, React, CSS, HTML, Bootstrap, and Firebase."
     }, {
-      key: 1,
+      key: 2,
       title: "MTG Fan",
       src: mtgfan,
       demoURL: "https://mtgfan.herokuapp.com/",
       githubURL: "https://github.com/tonychuaco/mtgfan/",
       description: "This passion project for a React coursework is a tribute to Magic The Gathering, one of my favorite trading card games growing up. \"As a fan, I wanted to share my passion for Magic and showcase their gorgeous artworks\". Made with JavaScript, React, CSS, HTML, and Bootstrap."
     }, {
-      key: 2,
+      key: 3,
       title: "Elmhurst",
       src: elmhurst,
       demoURL: "https://tonychuaco.github.io/elmhurst/",
       githubURL: "https://github.com/tonychuaco/elmhurst/",
       description: "The challenge for this school project is to develop a website that introduces Elmhurst neighborhood in New York City. Final project for course in Web Technology I: Building and Maintaining Web Sites. This project uses gulp.js built tool. Made with CSS, Bootstrap, HTML."
     }, {
-      key: 3,
+      key: 4,
       title: "MYtravel",
       src: mytravel,
       demoURL: "https://et712-dad.github.io/mytravel/",
@@ -48,7 +56,7 @@ const Projects = () => {
       <div key={key} className="project-container container">
         <div id="project1" className="projectItems">
           <div className="col-lg-8">
-            <img alt="placeholder" src={src} />
+            <a href={demoURL} target="_blank rel=noopener"><img className="shadow-sm" alt="placeholder" src={src} /></a>
           </div>
           <div className="col-lg-4">
             <h2>{title}</h2>
